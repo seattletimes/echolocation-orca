@@ -1,0 +1,21 @@
+{
+  "s3": {
+    "stage": {
+      "bucket": "",
+      "path": ""
+    },
+    "live": {
+      "bucket": "",
+      "path": ""
+    }
+  },
+  "title": "",
+  "description": "",
+  "url": "https://www.seattletimes.com/life/travel/how-to-get-to-sea-tac-airport/",
+  "slug": "",
+  "tags": [],
+  "image": "assets/social.jpg",
+  "production": false,
+  "embedded": true,
+  "sheets": ["1hwrkRhvrExk2671zIEc8z24zUVWO33WNtcwnKcy18bo"]
+}

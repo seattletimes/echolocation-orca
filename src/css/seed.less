@@ -1,0 +1,115 @@
+@import "seattletimes";
+@import "flexbox";
+
+body {
+  font-family: @df-sans;
+  max-width: 960px;
+}
+
+h1, h2 {
+  margin: 0;
+}
+h1 {
+  font-family: @df-serif;
+  color: darken(#DD492D, 20%);
+}
+h2 {
+  padding-top: 10px;
+  font-size: 18px;
+  color: #28575d;
+}
+
+a {
+  color: lighten(#28575d, 20%);
+  font-weight: bold;
+}
+
+.fa {
+  padding: 0 2px;
+  color: #DD492D;
+}
+
+.note {
+  font-style: italic;
+  font-size: 14px;
+  color: @df-dark-gray;
+}
+
+.outer {
+  padding: 20px 0;
+  margin: 20px 0;
+}
+
+.flex-container {
+  .display-flex();
+}
+
+.info {
+  .flex(0 0 340px);
+  font-size: 17px;
+  padding-right: 20px;
+
+  .title {
+    font-weight: bold;
+    font-size: 22px;
+    color: darken(#DD492D, 20%);
+  }
+  .text {
+    font-size: 16px;
+  }
+}
+
+.image {
+  .flex(1);
+  position: relative;
+
+  .background, .overlay {
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.overlay {
+  height: 0;
+  padding-bottom: percentage(788.4 / 1277.5);
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.st-group:hover, .st-group.selected {
+  .st-circle {
+    fill: darken(#DD492D, 20%);
+  }
+  .st-plus {
+    fill: darken(#F6CDBA, 20%);
+  }
+  .st-overlay {
+    opacity: 0.5;
+  }
+}
+
+.st-circle {
+  fill: #DD492D;
+  cursor: pointer;
+}
+.st-plus {
+  fill: #F6CDBA;
+  cursor: pointer;
+}
+.st-overlay {
+  fill: #000000;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.credits {
+  font-size: 11px;
+  color: @df-middle-gray;
+  text-align: right;
+}

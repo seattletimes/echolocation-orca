@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <%= t.include("partials/_head.html") %>
+  </head>
+  <body>
+
+    <responsive-child>
+      <div class="outer">
+        <div class="flex-container">
+          <div class="info">
+            <h1>Taxi? Uber? Light rail?</h1>
+            <h2>Here's a roundup of ways to get to your plane.</h2>
+            <p>It's not the most glamorous of journeys, but it's a necessary one: getting yourself, with baggage in tow, to Seattle-Tacoma International Airport. 
+            <p>Obviously, the cheapest and the easiest way is to get someone to take you — don't you know someone you can bribe? — but short of that, here's a roundup of options for how to get there, and how much it might cost you.
+            <p class="note"> <i class="fa fa-plus-circle"></i> Click on any icon to begin
+          </div>
+
+          <div class="image">
+            <img class="background" src="./assets/airport_illo_revised.jpg">
+            <div class="overlay"><%= t.include("assets/airport.svg") %></div>
+          </div>
+
+        </div>
+
+        <div class="credits">GABRIEL CAMPANARIO and AUDREY CARLSEN / THE SEATTLE TIMES</div>
+      </div>
+    </responsive-child>
+
+    <script src="app.js" async></script>
+    <script>
+      var data = <%= JSON.stringify(json.AirportTransportation_Sheet1) %>;
+    </script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_foot.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>
