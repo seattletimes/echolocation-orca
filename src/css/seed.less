@@ -40,15 +40,17 @@ a {
   margin: 20px 0;
 }
 
-.flex-container {
-  .display-flex();
-  max-width: 960px;
-}
+// .flex-container {
+//   .display-flex();
+// }
 
 .info {
   .flex(0 0 340px);
   font-size: 17px;
-  padding-right: 20px;
+  padding: 10 0 0 20px;
+  z-index: 5;
+  position: absolute;
+  max-width: 330px;
 
   .title {
     font-weight: bold;
@@ -72,7 +74,7 @@ a {
 
 .overlay {
   height: 0;
-  padding-bottom: percentage(788.4 / 1277.5);
+  padding-bottom: percentage(642.079 / 960);
 
   svg {
     position: absolute;
