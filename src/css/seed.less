@@ -47,6 +47,7 @@ a {
   font-size: 14px;
   color: @df-dark-gray;
   font-weight: regular;
+  vertical-align: text-bottom;
 }
 
 .outer {
@@ -55,6 +56,13 @@ a {
 }
 .inner {
   display: block;
+  position: relative;
+  padding-top: 67%;
+  z-index: -1;
+
+  @media @mobile {
+    padding-top: 133%;
+  }
 }
 
 .info {
@@ -190,6 +198,33 @@ a {
   cursor: pointer;
 }
 
+.buttons{
+  .display-flex();
+  max-width: 160px;
+}
+.goto {
+  .flex(1);
+  text-align: center;
+  width:auto;
+  padding: 4px 0px;
+  // border: 2px solid white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 10px;
+  &.disabled {
+    color: @df-dark-gray;
+  }
+}
+.goto:not(.disabled):hover {
+  background-color: black;
+  color: white;
+}
+
+.clear {
+  clear:both;
+  display: block;
+}
 
 .credits {
   font-size: 11px;
