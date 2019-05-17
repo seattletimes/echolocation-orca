@@ -21,7 +21,8 @@ h1 {
 }
 h2 {
   font-size: 18px;
-  color: #003759;
+  color: #8d2a17;
+  text-decoration: underline;
 
   @media @tablet {
       font-size: 14px;
@@ -30,6 +31,8 @@ h2 {
 
 p {
   font-weight: bold;
+  line-height: 1.2;
+  padding-bottom: 2px;
 }
 
 a {
@@ -39,15 +42,16 @@ a {
 
 .fa {
   padding: 0 2px;
-  color: #003759;
+  color: #8d2a17;
 }
 
 .note {
   font-style: italic;
   font-size: 14px;
-  color: @df-dark-gray;
-  font-weight: regular;
+  color: black;
+  font-weight: normal;
   vertical-align: text-bottom;
+  margin-top: 2px;
 }
 
 .outer {
@@ -60,7 +64,7 @@ a {
   padding-top: 67%;
   z-index: -1;
 
-  @media @mobile {
+  @media @tablet {
     padding-top: 133%;
   }
 }
@@ -104,20 +108,6 @@ a {
   }
 }
 
-.visible-mobile {
-  display: none !important;
-}
-
-@media @mobile {
-  .visible-mobile {
-    display: inline !important;
-  }
-
-  .hidden-mobile {
-    display: none !important;
-  }
-}
-
 .image {
   .flex(1);
   position: relative;
@@ -126,7 +116,7 @@ a {
     position: absolute;
     width: 100%;
 
-    @media @mobile {
+    @media @tablet {
       display: none !important;
     }
   }
@@ -144,7 +134,7 @@ a {
     height: 100%;
   }
 
-  @media @mobile {
+  @media @tablet {
       display: none !important;
     }
 }
@@ -158,7 +148,7 @@ a {
     position: absolute;
     width: 100%;
   }
-   @media @mobile {
+   @media @tablet {
       display: inline !important;
     }
 }
@@ -175,7 +165,7 @@ a {
     height: 100%;
   }
 
-  @media @mobile {
+  @media @tablet {
       display: inline !important;
     }
 }
@@ -201,6 +191,10 @@ a {
 .buttons{
   .display-flex();
   max-width: 160px;
+
+  @media @mobile {
+    max-width: 100%;
+  }
 }
 .goto {
   .flex(1);
