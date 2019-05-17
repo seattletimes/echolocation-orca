@@ -22,6 +22,7 @@ var options = Object.keys(window.data);
 
 qsa(".goto").forEach(function(btn) {
 	btn.addEventListener("click", function(e) {
+
 		var selected = document.querySelector(".selected");
 
 		var selectedIndex = selected ? options.indexOf(selected.id) : -1;
