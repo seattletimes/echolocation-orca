@@ -15,4 +15,6 @@ qsa(".st-group").forEach(function(group) {
     if (document.querySelector(".selected")) document.querySelector(".selected").classList.remove("selected");
     e.target.parentElement.classList.add("selected");
   });
+
+  
 });

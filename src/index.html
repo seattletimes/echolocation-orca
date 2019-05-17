@@ -12,22 +12,32 @@
 
     <responsive-child>
       <div class="outer">
-        <div class="flex-container">
+        <div class="inner">
+
           <div class="info">
             <h1>Echolocation</h1>
-            <p>Toothed whales, including orcas, and most bats have the ability to locate and identify objects through echoes, which are reflected sound. For killer whales, echolocation is crucial for hunting salmon.
+              <p>Toothed whales, including orcas, and most bats have the ability to locate and identify objects through echoes, which are reflected sound. For killer whales, echolocation is crucial for hunting salmon.
             <h2>How it works</h2>
-            <p class="note"> <i class="fa fa-plus-circle"></i> Click on any number to begin
+              <p class="note"> <!-- <i class="fa fa-plus-circle"> --></i> Click on any number to begin
+            <div class="buttons">
+              <div class="goto back disabled"><i class="fa fa-chevron-left"></i> Previous</div>
+              <div class="goto next">Next <i class="fa fa-chevron-right"></i></div>
+            </div>
           </div>
 
           <div class="image">
-            <img class="background" src="./assets/echolocation-bkgd.jpg">
+              <img class="background" src="./assets/echolocation-bkgd.jpg">
             <div class="overlay"><%= t.include("assets/echolocation.svg") %></div>
           </div>
-
+          <div class="image-mobile">
+              <img class="background2" src="./assets/echolocation-bkgd-M.jpg">
+            <div class="overlay-mobile"><%= t.include("assets/echolocation-M.svg") %></div>
+          </div>
         </div>
 
-        <div class="credits">GABRIEL CAMPANARIO and AUDREY CARLSEN / THE SEATTLE TIMES</div>
+        <div class="inner">
+          <div class="credits">EMILY M. ENG / THE SEATTLE TIMES</div>
+        </div>
       </div>
     </responsive-child>
 
